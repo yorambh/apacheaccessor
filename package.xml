@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE package SYSTEM "http://pear.php.net/dtd/package-1.0">
+<package version="1.0" packagerversion="1.9.4">
+ <name>apacheaccessor</name>
+ <summary>simple API to Apache runtime configuration</summary>
+ <description>ApacheAccessor lets you retrieve Apache configuration (at runtime of current proccess) as PHP array or dump it as HTML table.
+ </description>
+ <maintainers>
+  <maintainer>
+   <user>yorambh</user>
+   <name>Yoram Bar-Haim</name>
+   <email>yoram.b@zend.com</email>
+   <role>lead</role>
+  </maintainer>
+  </maintainers>
+ <release>
+  <version>1.0.1</version>
+  <date>2012-08-28</date>
+  <license>PHP 3.01</license>
+  <state>stable</state>
+  <notes>install-examples command added to build
+build issue with apr.h fixed
+  </notes>
+  <deps>
+   <dep type="php" rel="ge" version="5.2.0"/>
+  </deps>
+  <configureoptions>
+   <configureoption name="with-apxs" default="autodetect" prompt="Please provide the prefix of apxs2 binary"/>
+   <configureoption name="with-aprconfig" default="autodetect" prompt="Please provide the prefix of aprconfig binary"/>
+  </configureoptions>
+  <filelist>
+   <dir name="examples">
+    <file role="php" name="apache.php"/>
+    <file role="php" name="vhosts.php"/>
+    <file role="php" name="vhosts2.php"/>
+   </dir> <!-- /examples -->
+   <file role="src" name="apache_conf_walk.c"/>
+   <file role="src" name="apache_conf_walk.h"/>
+   <file role="src" name="config.m4"/>
+   <file role="src" name="php_apache_accessor.c"/>
+   <file role="src" name="php_apache_accessor.h"/>
+   <file role="src" name="php_apache_dump_table.h"/>
+  </filelist>
+ </release>
+</package>
